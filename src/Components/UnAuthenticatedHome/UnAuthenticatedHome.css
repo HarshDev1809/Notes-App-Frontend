@@ -1,0 +1,31 @@
+.ua-div{
+    height: 100vh;
+    width: 100vw;
+}
+
+.ua-div button {
+    width: 6%;
+}
+
+.ua-div a:hover{
+    cursor: pointer;
+}
+
+.ua-div .ua-nav-div{
+    height: 10vh;
+    width: 100vw;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0 15px
+}
+
+.ua-div .ua-body{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

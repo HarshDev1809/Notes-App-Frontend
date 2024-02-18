@@ -1,0 +1,20 @@
+.notes{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    padding-top: 10px;
+    padding-left: 45px;
+    border: 1px solid black;
+}
+
+.notes-div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 45px;
+}

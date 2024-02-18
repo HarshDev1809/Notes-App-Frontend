@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.edit-note-div{
+    border: 2px solid black;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-note-div .edit-note{
+    border: 2px solid black;
+    height: 90%;
+    width: 60%;
+}
+
+.edit-note-div .date{
+    height: 8vh;
+    width: 100%;
+    padding: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.edit-note-div .heading{
+    height: 8vh;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.edit-note-div .body{
+    height: 58vh;
+    width: 100%;
+    border : 1px solid black;
+    padding: 10px;
+}
+
+.edit-note-div input{
+    height: 100%;
+    width: 100%;
+}
+
+.edit-note-div textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+.edit-note-div button{
+    height: 100%;
+    width: 30%;
+}
+
+.edit-note-div .footer-div{
+    margin: 0;
+    height: 6vh;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

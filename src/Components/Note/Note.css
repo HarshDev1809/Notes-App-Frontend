@@ -1,0 +1,38 @@
+.note{
+    height : 50vh;
+    width: 30vw;
+    border-radius: 10px;
+}
+
+.note-close-btn{
+    display: flex;
+    justify-content: end;
+    height: 7%;
+}
+
+.note .date{
+    height: 10%;
+}
+
+.note .heading{
+    height: 11%;
+}
+
+.note .body{
+    height: 62%;
+}
+
+.note span:hover{
+    cursor: pointer;
+}
+
+.note .btn-div button {
+    height: 100%;
+}
+
+.note p{
+    height: 100%;
+    width: 100%;
+}
+
+

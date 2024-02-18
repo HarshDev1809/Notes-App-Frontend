@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.welcome-panel-main-div{
+    height: 100vh;
+    width: 65vw;
+    /* background-color: aqua; */
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

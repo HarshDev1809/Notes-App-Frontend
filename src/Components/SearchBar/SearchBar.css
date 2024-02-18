@@ -1,0 +1,27 @@
+.search-bar-div{
+    height: 8vh;
+    width: 100vw;
+}
+
+.border{
+    border : 2px solid black;
+}
+
+.search-bar-div form{
+    height: 70%;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.search-bar-div input{
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+.search-bar-div button{
+    height: 100%;
+    width: 20%;
+    text-align: center;
+}
