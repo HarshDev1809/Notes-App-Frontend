@@ -18,11 +18,15 @@
     width: 7vh;
     margin: 0%;
     padding: 0;
+    
+
 }
 
 .new-btn {
     height: 100%;
     width: 100%;
+    background-color: #FFD700;
+    border-radius:10px ;
     
 }
 

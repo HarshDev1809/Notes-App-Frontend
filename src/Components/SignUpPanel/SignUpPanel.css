@@ -1,9 +1,3 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 .main-div{
     background-color: #FFD700;
     height : 100vh;
@@ -13,16 +7,9 @@
     align-items: center;
 }
 
-.signin-panel-div{
-    height: 80%;
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: rgba(263,263,263,0.7);
-    
-
+.signup-panel-div .form-div{
+    height: 70%;
+    width : 100%;
 }
 
 .header-div{
@@ -31,40 +18,31 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    text-align: center;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
 
 }
 
-.form-div{
-    height: 70%;
-    width : 100%;
-}
-
-/* .input-form{
-    border: 2px solid black;
-    height: 100%;
-}
-
-.footer-div{
-    border: 2px solid black;
-    height: 10%;
-    width: 80%;
-} */
-
-
-.input-form{
+.signup-panel-div .input-form-signup{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     width: 100%;
     flex-direction: column;
     height: 100%;
 }
 
-.signin-input{
+.main-div .signup-panel-div{
+    height: 90%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(263,263,263,0.7);
+}
+
+.main-div .signup-input{
     width: 90%;
     padding : 7px;
     height: 13%;
@@ -87,7 +65,7 @@
     width: 80%;
 }
 
-.signin-btn{
+.signup-btn{
     height: 10%;
     width: 40%;
     border-radius: 7px;
@@ -107,10 +85,3 @@ button:hover{
 .mt-5{
     margin-top: 5px;
 }
-
-@media screen and (max-width: 768px){
-    .main-div{
-        width: 100vw;
-    }
-}
-

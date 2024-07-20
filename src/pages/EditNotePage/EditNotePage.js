@@ -5,6 +5,7 @@ import HomePageHeader from "../../Components/HomePageHeader/HomePageHeader";
 import Loader from "../../Components/Loader/Loader";
 import { inputDate , outputDate} from "../../Modules/date";
 import "./EditNotePage.css"
+const {todayDateString, todayDate} = require("../../Modules/date");
 
 function EditNotePage() {
     const navigate = useNavigate();
@@ -32,9 +33,15 @@ function EditNotePage() {
 
   const cancelChanges = () => {
     if(window.confirm("Cancel Changes ?")){
-        navigate("/home");
+        navigate(`/note/${id}`);
     }
   };
+
+  function reverseDate(s){
+    s = s.split("-").reverse();
+    return `${s[0]}-${s[1]}-${s[2]}`
+    
+}
 
   const saveChanges = async (e) =>{
     e.preventDefault()
@@ -49,6 +56,13 @@ function EditNotePage() {
   }
 
   const changeDate =  (e) =>{
+    
+    if(e.target.value !== reverseDate(todayDate())){
+      if(window.confirm(`Today's Date is ${todayDateString()}. Change Date to ${outputDate(e.target.value)} ? `)){
+        setInputNoteDate(e.target.value);
+      setNoteDate(outputDate(e.target.value));
+    }
+    }
     setInputNoteDate(e.target.value);
     setNoteDate(outputDate(e.target.value));
   }
@@ -64,22 +78,22 @@ function EditNotePage() {
   const showNote = () => {
     return (
       <div className="edit-note-div">
-        <div className="edit-note">
+        <div className="edit-note w-100">
           <form onSubmit = {saveChanges}>
             <div className="date">
-              <input type="date" value={inputNoteDate} onChange = {changeDate}></input>
+              <input className="rounded-2 p-1 border" type="date" value={inputNoteDate} onChange = {changeDate}></input>
             </div>
             <div className="heading">
-              <input type="text" value={noteHeading} onChange = {changeHeading}></input>
+              <input type="text" className="rounded-2 border p-1" value={noteHeading} onChange = {changeHeading}></input>
             </div>
             <div className="body">
-              <textarea value={noteBody} required onChange = {changeBody}></textarea>
+              <textarea value={noteBody} className="rounded-2 border p-2 h-100" rows={2} required onChange = {changeBody}></textarea>
             </div>
             <div className="footer-div">
-              <button type="button" onClick={cancelChanges}>
+              <button type="button" className="rounded border" onClick={cancelChanges}>
                 Cancel
               </button>
-              <button type="submit">save</button>
+              <button type="submit" className="rounded border">save</button>
             </div>
           </form>
         </div>

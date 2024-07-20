@@ -5,7 +5,6 @@
 }
 
 .new-note-div{
-    border: 2px solid black;
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -13,9 +12,8 @@
 }
 
 .new-note-div .new-note{
-    border: 2px solid black;
     height: 90%;
-    width: 60%;
+    width: 100%;
 
 }
 
@@ -27,43 +25,47 @@
     align-items: center;
 }
 
+.new-note .new-note-date >p{
+    height: 100%;
+    margin: 0;
+    background-color: rgba(255, 215, 0,0.2);
+}
+
 .new-note .new-note-heading{
     height: 8vh;
     padding: 10px;
     width: 100%;
-    border: 1px solid black;
 }
 
 .new-note .new-note-body{
     height: 58vh;
     width: 100%;
-    border : 1px solid black;
     padding: 10px;
 }
 
 .new-note-div input{
     height: 100%;
     width: 100%;
-    
+    background-color: rgba(255, 215, 0,0.2);
 }
 
 .new-note-div textarea{
     height: 100%;
     width: 100%;
     resize: none;
-    
+    background-color: rgba(255, 215, 0,0.2);
 }
 
 .new-note-div button{
     height: 100%;
     width: 30%;
+    background-color: #FFD700;
 }
 
 .new-note .footer-div{
     margin: 0;
     height: 6vh;
     width: 100%;
-    border: 1px solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;

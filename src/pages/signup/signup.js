@@ -1,7 +1,12 @@
-
+import SignUpPanel from "../../Components/SignUpPanel/SignUpPanel"
+import WelcomePanel from "../../Components/WelcomePanel/WelcomePanel"
+import "./SignUp.css"
 
 function SignUpPage(){
-    return <h1>sign up page</h1>
+    return <div className="sign-up-page">
+        <SignUpPanel />
+        <WelcomePanel />
+    </div>
 }
 
 export default SignUpPage

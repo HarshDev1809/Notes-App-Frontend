@@ -4,21 +4,34 @@
     box-sizing: border-box;
 }
 
+.opened-note-div{
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 .open-note{
-    height: 90vh;
     /* width: 100vw; */
-    border : 1px solid black;
+    min-height: 90vh;
     margin : 0;
-    padding : 0;
+    padding : 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .open-note .note-div{
-    height: 90%;
-    width: 60%;
-    border: 2px solid black;
+    /* height: 90%; */
+    min-height: 95%;
+    width: 85%;
+    /* border: 2px solid black; */
+}
+
+.open-note >div{
+    width: 100%;
 }
 
 .open-note .date{
@@ -27,20 +40,26 @@
     padding: 10px;
     justify-content: start;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .open-note .heading{
-    height: 8vh;
+    /* height: 8vh; */
     padding: 10px;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+}
+
+.open-note .heading h4{
+    text-wrap: wrap;
 }
 
 .open-note .body{
-    height: 58vh;
+    /* min-height: 70vh; */
     width: 100%;
-    border : 1px solid black;
+    /* border : 1px solid black; */
     padding: 10px;
 }
 
@@ -48,7 +67,7 @@
     margin: 0;
     height: 6vh;
     width: 100%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -66,5 +85,35 @@
 .open-note button{
     height: 100%;
     width: 30%;
+    
+    background-color: #FFD700;
+    
 }
 
+.open-note .btn{
+    color: black;
+}
+
+.open-note textarea{
+    height: 100%;
+}
+
+.open-note pre{
+    font-size: 1rem;
+    text-wrap: wrap;
+    background-color: rgba(255, 215, 0,0.2);
+    min-height: 50vh;
+}
+
+.open-note .home-btn{
+    width: 10%;
+    margin-right: 10px;
+}
+
+.open-note h6{
+    background-color: rgba(255, 215, 0,0.2);
+}
+
+.open-note h1{
+    background-color: rgba(255, 215, 0,0.2);
+}

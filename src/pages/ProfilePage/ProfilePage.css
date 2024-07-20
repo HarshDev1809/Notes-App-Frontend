@@ -1,0 +1,16 @@
+.page{
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.profile-page-div{
+    height: 90vh;
+    width: 70vw;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-page-div > div{
+        width: 100% !important;
+    }
+}

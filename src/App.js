@@ -9,6 +9,10 @@ import NoteOpened from './pages/NoteOpened/NoteOpended';
 import UnAuthenticated from './Components/HOC/UnAuthenticated/UnAuthenticated';
 import CreateNotePage from './pages/CreateNotePage/CreateNotePage';
 import EditNotePage from './pages/EditNotePage/EditNotePage';
+import UnSignedPage from './pages/UnSignedPage/UnSignedPage';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import ProfilePage from './pages/ProfilePage/ProfilePage';
 
 function App() {
   return (
@@ -18,9 +22,11 @@ function App() {
         <Route path="/signup" element={<SignUpPage/>}/>
         <Route path="/signin" element={<LandingPage/>}/>
         <Route path="/home" element={<UnAuthenticated><HomePage/></UnAuthenticated>}/>
-        <Route path="/note/:id" element={<NoteOpened />} />
-        <Route path="/note/create" element={<CreateNotePage/>} />
-        <Route path="/note/edit/:id" element={<EditNotePage/>} />
+        <Route path="/note/:id" element={<UnAuthenticated><NoteOpened /></UnAuthenticated>} />
+        <Route path="/note/create" element={<UnAuthenticated><CreateNotePage/></UnAuthenticated>} />
+        <Route path="/note/edit/:id" element={<UnAuthenticated><EditNotePage/></UnAuthenticated>} />
+        <Route path="/home/unsigned" element={<UnAuthenticated><UnSignedPage /></UnAuthenticated>}/>
+        <Route path="/profile" element={<UnAuthenticated><ProfilePage /></UnAuthenticated>} />
       </Routes>
     </Router>
   );

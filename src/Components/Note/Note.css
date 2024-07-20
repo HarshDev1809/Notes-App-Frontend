@@ -35,4 +35,42 @@
     width: 100%;
 }
 
+.card {
+    /* height: 20vh; */
+    width: calc(31%);
+}
+
+/* .card-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+.card-body{
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    /* overflow: hidden; */
+    /* display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+}
+
+.note-card{
+    height: 31vh !important; 
+} 
+
+.card-date{
+    background-color: #FFD700 !important;
+}
+
+@media screen and (max-width: 1335px) {
+    .note-card{
+        width: 45%;
+    }
+}
 

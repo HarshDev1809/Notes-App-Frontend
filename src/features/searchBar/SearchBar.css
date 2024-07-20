@@ -1,0 +1,21 @@
+.search-bar-div{
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar-div >div{
+    width: 30%;
+}
+
+.border{
+    border : 2px solid black;
+}
+
+@media screen and (max-width: 768px){
+    .search-bar-div >div{
+        width: 90% !important;
+    }
+}

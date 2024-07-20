@@ -44,20 +44,20 @@ function NewNote(){
     }
 
     return <div className="new-note-div">
-        <div className = "new-note">
+        <div className = "new-note p-2">
             <form onSubmit={saveChanges}>
                 <div className = "new-note-date">
-                    <p>{todayDateString()}</p>
+                    <p className="rounded border p-1">{todayDateString()}</p>
                 </div>
                 <div className = "new-note-heading">
-                    <input type="text" value={noteHeading} onChange = {changeHeading}></input>
+                    <input className="rounded border p-1" type="text" value={noteHeading} onChange = {changeHeading}></input>
                 </div>
                 <div className = "new-note-body">
-                    <textarea value={noteBody} onChange = {changeBody} required></textarea>
+                    <textarea className="rounded border p-1"value={noteBody} onChange = {changeBody} required></textarea>
                 </div>
                 <div className="footer-div">
-                <button type="button" onClick={cancelChanges}>Cancel</button>
-                <button type="submit" >save</button>
+                <button type="button" className="border" onClick={cancelChanges}>Cancel</button>
+                <button type="submit" className="border">save</button>
                 </div>
             </form>
 

@@ -10,7 +10,7 @@ function AddBtn(){
     }
 
     return <div className="add-btn-div flex">
-        <button type="button" className="new-btn flex" onClick={goToCreatePage}>
+        <button type="button" className="new-btn flex border" onClick={goToCreatePage}>
             <span class="material-symbols-outlined full-size flex">
                 sticky_note
             </span>

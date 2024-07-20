@@ -44,30 +44,94 @@ function NoteOpened() {
     }
   };
 
+  const goToHome = () => {
+    navigate("/home");
+  };
+
   function showNotes() {
     return (
-      <div className="open-note">
-        <div className="note-div">
-          <div className="date">
-            <p>{noteDate}</p>
-          </div>
-          <div className="heading">
-            <h4>{noteHeading}</h4>
-          </div>
-          <div className="body">
-            <textarea>{noteBody}</textarea>
-          </div>
-          <div className="footer-div">
-            <button type="button" onClick={deleteNote}>
-              Delete
-            </button>
-            <button type="button" onClick={editNote}>
-              Edit
-            </button>
-          </div>
+      <div className="open-note w-100">
+        <div className="date">
+          <h6 className="rounded-2 p-2 border">{noteDate}</h6>
+        </div>
+        <div className="heading">
+          <h1 className="rounded-2 border p-2">{noteHeading}</h1>
+        </div>
+        <div className="body">
+          <pre className="rounded-2 border p-2 h-100">{noteBody}</pre>
+        </div>
+        <div className="footer-div">
+          <button type="button" className="rounded border" onClick={deleteNote}>
+            delete
+          </button>
+          <button type="button" className="rounded border" onClick={editNote}>
+            Edit
+          </button>
         </div>
       </div>
-    );
+    )
+    // <div className="open-note">
+    {
+      /* <div className="card text-break d-block">
+          <div className="card-header">{noteDate}</div>
+          <div className="card-body d-block">
+            <h1 className="card-title d-block py-3 fs-1">{noteHeading}</h1>
+            <pre className="fs-6">{noteBody}</pre>
+            <div className="d-flex justify-content-evenly">
+              <button type="button" className="btn btn-primary" onClick={deleteNote}>
+                <span class="material-symbols-outlined">delete</span>
+              </button>
+              <button type="button" className="btn btn-primary" onClick={editNote}>
+                <span class="material-symbols-outlined">edit</span>
+              </button>
+            </div>
+          </div>
+        </div> */
+    }
+
+    // </div>
+
+    // <div className="open-note bg-warning-subtle">
+    {
+      /* <button
+          type="button"
+          className="btn d-flex btn-outline-primary home-btn align-items-center justify-content-center"
+          onClick={goToHome}
+        >
+          <span class="material-symbols-outlined">home</span>
+        </button> */
+    }
+    //   <div className="note-div">
+    //     <div className="date rounded-2 bg-warning-subtle my-1">
+    //       <p>{noteDate}</p>
+    //     </div>
+    //     <div className="heading rounded-2 text-wrap bg-warning-subtle my-1">
+    //       <h4>{noteHeading}</h4>
+    //     </div>
+    //     <div className="body rounded-2 bg-warning-subtle my-1">
+
+    //       <pre>{noteBody}</pre>
+    //     </div>
+    //     <div className="footer-div">
+    //       <button
+    //         type="button"
+    //         class="btn btn-outline-warning d-flex justify-content-center align-items-center"
+    //         onClick={deleteNote}
+    //       >
+    //         <span class="material-symbols-outlined">delete</span>
+    //       </button>
+    //       <button
+    //         type="button"
+    //         class="btn btn-outline-light d-flex justify-content-center align-items-center"
+    //         onClick={editNote}
+    //       >
+    //         <span class="material-symbols-outlined">edit</span>
+    //       </button>
+    //     </div>
+    //   </div>
+    // </div>
+
+    // );
   }
 
   useEffect(() => {
@@ -79,7 +143,7 @@ function NoteOpened() {
   return (
     <div className="opened-note-div">
       <HomePageHeader />
-      {isLoading ? <Loader /> : showNotes()};
+      {isLoading ? <Loader /> : showNotes()}
     </div>
   );
 }

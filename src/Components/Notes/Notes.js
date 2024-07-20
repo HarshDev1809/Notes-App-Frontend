@@ -7,23 +7,29 @@ import { getToken } from "../../Modules/token";
 import Loader from "../Loader/Loader";
 import { verifyUser } from "../../api/auth/verify/verify.user.api";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setData } from "../../features/notesData/notesDataSlice";
 
 function Notes() {
 
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const [isUser, changeIsUser] = useState(true);
 
   const [isLoading, changeIsLoading] = useState(true);
 
-  const [notes, setNotes] = useState([]);
+  // const [notes, setNotes] = useState([]);
+
+  const dispatch = useDispatch();
+  const noteData = useSelector((state)=>state.notesData.value);
+  const searchValue = useSelector((state)=>state.searchBar.value);
 
   const fetchNotes = async () => {
     const verifyResponse = await verifyUser();
     if (verifyResponse) {
         const response = await getNotes();
-        console.log(response.data)
-        setNotes(response.data)
+        dispatch(setData(response.data));
+        // setNotes(response.data) 
         changeIsLoading(false);
     }
     else (
@@ -44,9 +50,12 @@ function Notes() {
 
   function showNotes(){
     return <div className="notes-div">
-        {notes.map((note)=>{
-            console.log(note)
-            return <Note noteDetails={note}/>
+        {noteData.map((note)=>{
+            if(note.heading.includes(searchValue) || note.body.includes(searchValue)){
+              return <Note noteDetails={note}/>
+            }else{
+              return
+            }
         })}
     </div>
   }

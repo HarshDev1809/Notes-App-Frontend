@@ -61,11 +61,10 @@ function getCorrectMonth(month) {
 
 function todayDate() {
   const date = new Date();
-  return {
-    day: getCorrectDate(date.getDate()),
-    month: getCorrectMonth(date.getMonth() + 1),
-    year: date.getFullYear(),
-  };
+    const day = getCorrectDate(date.getDate());
+    const month = getCorrectMonth(date.getMonth() + 1);
+    const year =  date.getFullYear();
+    return `${day}-${month}-${year}`;
 }
 
 function todayDateString() {
