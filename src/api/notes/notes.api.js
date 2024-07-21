@@ -9,7 +9,6 @@ export const getNotes = async () => {
       "x-access-token": token,
     },
   });
-  // console.log(reponse.data);
   console.log(reponse);
   return reponse;
 };

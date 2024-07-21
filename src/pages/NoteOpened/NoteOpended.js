@@ -13,12 +13,6 @@ function NoteOpened() {
   const [noteHeading, setNoteHeading] = useState("");
   const [noteBody, setNoteBody] = useState("");
 
-  const noteDetail = {
-    date: noteDate,
-    heading: noteHeading,
-    body: noteBody,
-  };
-
   const fetchNote = async () => {
     try {
       let response = await getNoteById(id);
@@ -44,10 +38,6 @@ function NoteOpened() {
     }
   };
 
-  const goToHome = () => {
-    navigate("/home");
-  };
-
   function showNotes() {
     return (
       <div className="open-note w-100">
@@ -69,69 +59,7 @@ function NoteOpened() {
           </button>
         </div>
       </div>
-    )
-    // <div className="open-note">
-    {
-      /* <div className="card text-break d-block">
-          <div className="card-header">{noteDate}</div>
-          <div className="card-body d-block">
-            <h1 className="card-title d-block py-3 fs-1">{noteHeading}</h1>
-            <pre className="fs-6">{noteBody}</pre>
-            <div className="d-flex justify-content-evenly">
-              <button type="button" className="btn btn-primary" onClick={deleteNote}>
-                <span class="material-symbols-outlined">delete</span>
-              </button>
-              <button type="button" className="btn btn-primary" onClick={editNote}>
-                <span class="material-symbols-outlined">edit</span>
-              </button>
-            </div>
-          </div>
-        </div> */
-    }
-
-    // </div>
-
-    // <div className="open-note bg-warning-subtle">
-    {
-      /* <button
-          type="button"
-          className="btn d-flex btn-outline-primary home-btn align-items-center justify-content-center"
-          onClick={goToHome}
-        >
-          <span class="material-symbols-outlined">home</span>
-        </button> */
-    }
-    //   <div className="note-div">
-    //     <div className="date rounded-2 bg-warning-subtle my-1">
-    //       <p>{noteDate}</p>
-    //     </div>
-    //     <div className="heading rounded-2 text-wrap bg-warning-subtle my-1">
-    //       <h4>{noteHeading}</h4>
-    //     </div>
-    //     <div className="body rounded-2 bg-warning-subtle my-1">
-
-    //       <pre>{noteBody}</pre>
-    //     </div>
-    //     <div className="footer-div">
-    //       <button
-    //         type="button"
-    //         class="btn btn-outline-warning d-flex justify-content-center align-items-center"
-    //         onClick={deleteNote}
-    //       >
-    //         <span class="material-symbols-outlined">delete</span>
-    //       </button>
-    //       <button
-    //         type="button"
-    //         class="btn btn-outline-light d-flex justify-content-center align-items-center"
-    //         onClick={editNote}
-    //       >
-    //         <span class="material-symbols-outlined">edit</span>
-    //       </button>
-    //     </div>
-    //   </div>
-    // </div>
-
-    // );
+    );
   }
 
   useEffect(() => {

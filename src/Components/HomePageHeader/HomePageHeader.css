@@ -1,13 +1,7 @@
-/* *{
-    margin : 0;
-    padding : 0;
-    box-sizing: border-box;
-} */
 
 .home-page-header-div{
     height: 10vh;
     width: 100vw;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
     align-items: center;
