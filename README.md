@@ -12,3 +12,6 @@ This project is a responsive note-taking website built using modern web developm
 * **Backend:** Express.JS, Node.JS 
 * **Database:** MongoDB 
 * **Hosting:** Render.com
+
+# Backend
+**Respository Link:** https://github.com/HarshDev1809/Sticky-Note-BackEnd
