@@ -20,8 +20,8 @@ function SearchBar() {
   }
 
   return (
-    <div className="search-bar-div">
-      <div className="input-group mb-3 w-25 text-centre">
+    <div className="search-bar-div d-flex justify-content-center align-items-center">
+      <div className="input-group w-25 text-centre">
         <input
           type="text"
           className="form-control"

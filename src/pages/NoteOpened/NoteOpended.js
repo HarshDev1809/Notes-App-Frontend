@@ -40,12 +40,12 @@ function NoteOpened() {
 
   function showNotes() {
     return (
-      <div className="open-note w-100">
+      <div className="open-note w-100 d-flex flex-column justify-content-start">
         <div className="date">
-          <h6 className="rounded-2 p-2 border">{noteDate}</h6>
+          <h6 className="rounded-2 p-2 border h-100 d-flex align-items-center">{noteDate}</h6>
         </div>
         <div className="heading">
-          <h1 className="rounded-2 border p-2">{noteHeading}</h1>
+          <h1 className="rounded-2 border p-2 h-100 d-flex align-items-center">{noteHeading}</h1>
         </div>
         <div className="body">
           <pre className="rounded-2 border p-2 h-100">{noteBody}</pre>
